@@ -1,0 +1,62 @@
+<section class="projects-wrap">
+  <header class="projects-header">
+    <h2>Projects</h2>
+    <p class="subtitle">Click a project to view details and open the live site or repo.</p>
+  </header>
+
+  <div class="projects-grid">
+    <article
+      class="project-card"
+      *ngFor="let project of projects"
+      (click)="openDetails(project)"
+      role="button"
+      tabindex="0"
+      (keyup.enter)="openDetails(project)"
+      [attr.aria-label]="'Open details for ' + project.name"
+    >
+      <div class="card-body">
+        <h3 class="project-title">{{ project.name }}</h3>
+        <p class="project-short">{{ project.description }}</p>
+        <div class="tags">
+          <span class="tag" *ngFor="let t of project.tools">{{ t }}</span>
+          <span class="year" *ngIf="project.year">{{ project.year }}</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Modal -->
+<div
+  class="project-modal"
+  *ngIf="modalOpen"
+  (click)="closeDetails()"
+  role="dialog"
+  aria-modal="true"
+>
+  <div class="modal-box" (click)="$event.stopPropagation()" tabindex="-1">
+    <button class="modal-close" (click)="closeDetails()" [attr.aria-label]="'Close modal'">
+      ×
+    </button>
+
+    <h3 class="modal-title">{{ selectedProject?.name }}</h3>
+    <p class="modal-desc">{{ selectedProject?.description }}</p>
+
+    <div class="modal-meta" *ngIf="selectedProject">
+      <div *ngIf="selectedProject.tools?.length">
+        <strong>Tools:</strong>
+        <span class="meta-items">{{ selectedProject.tools?.join(', ') }}</span>
+      </div>
+      <div *ngIf="selectedProject.year">
+        <strong>Year:</strong> {{ selectedProject.year }}
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn primary" (click)="openProjectLink()" [disabled]="!selectedProject?.link">
+        Open Project
+      </button>
+      <button class="btn" (click)="closeDetails()">Close</button>
+    </div>
+  </div>
+</div>

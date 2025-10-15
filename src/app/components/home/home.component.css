@@ -1,0 +1,258 @@
+/* ====== Global Styles ====== */
+body {
+  background: #020412;
+  color: #e2e8f0;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+section {
+  padding: 100px 10%;
+  scroll-margin-top: 80px;
+}
+
+/* ====== Home Section ====== */
+.home {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00ffc3;
+  box-shadow: 0 0 25px rgba(0, 255, 195, 0.15);
+  z-index: 2;
+  transition: all 0.4s ease-in-out;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(0, 255, 195, 0.35);
+}
+
+.glow {
+  display: none; /* Removed green glow background */
+}
+
+.name {
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
+
+.title {
+  color: #00ffc3;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.tagline {
+  font-style: italic;
+  color: #a0aec0;
+  margin-top: 10px;
+}
+
+.scroll-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  color: #00ffc3;
+  border: 2px solid #00ffc3;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.scroll-btn:hover {
+  background: #00ffc3;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ====== Terminal Card ====== */
+.terminal-card {
+  margin: 60px auto;
+  background: #0a0f24;
+  width: 85%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 255, 195, 0.15);
+  overflow: hidden;
+  animation: fadeInUp 1.2s ease;
+}
+
+.terminal-header {
+  background: #1a1e33;
+  padding: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin-right: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-body {
+  padding: 25px;
+  font-family: 'Courier New', monospace;
+  color: #00ffc3;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background: #00ffc3;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ====== Skills Section ====== */
+.skills {
+  text-align: center;
+}
+
+.skills h2 i {
+  margin-right: 10px;
+  color: #00ffc3;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.skill-card {
+  background: #0d1329;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 255, 195, 0.25);
+}
+
+.skill-card i {
+  font-size: 2.5rem;
+  color: #00ffc3;
+  margin-bottom: 15px;
+}
+
+/* ====== Projects Section ====== */
+.projects {
+  text-align: center;
+}
+
+.projects h2 i {
+  margin-right: 10px;
+  color: #00ffc3;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.project {
+  background: #0d1329;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 255, 195, 0.25);
+}
+
+.project i {
+  font-size: 2.5rem;
+  color: #00ffc3;
+  margin-bottom: 15px;
+}
+
+/* ====== Contact Section ====== */
+.contact {
+  text-align: center;
+}
+
+.contact h2 i {
+  margin-right: 10px;
+  color: #00ffc3;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  color: #000;
+  background: #00ffc3;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.contact-btn:hover {
+  background: #00b894;
+}
+
+/* ====== Footer ====== */
+.footer {
+  text-align: center;
+  padding: 25px;
+  color: #aaa;
+  font-size: 0.9rem;
+  background: #0a0f24;
+}
+
+/* ====== Animations ====== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== Scroll Reveal ====== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

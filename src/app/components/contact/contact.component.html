@@ -1,0 +1,72 @@
+<section class="contact-hero" id="contact">
+  <!-- Hero header -->
+  <div class="hero-header">
+    <h1>Let’s Connect</h1>
+    <p class="hero-subtitle">
+      Collaboration, cyber challenges, or just a friendly hello — reach out and we’ll make it happen.
+    </p>
+  </div>
+
+  <!-- Contact Cards -->
+  <div class="cards-grid">
+    <div class="contact-card" (click)="toggleTab('email')">
+      <i class="fas fa-envelope-open-text"></i>
+      <h3>Email</h3>
+      <p>Send me a message directly to <strong>felixmarubi&#64;protonmail.com</strong></p>
+    </div>
+
+    <div class="contact-card" (click)="toggleTab('github')">
+      <i class="fab fa-github"></i>
+      <h3>GitHub</h3>
+      <p>Check my projects and collaborate on code.</p>
+    </div>
+
+    <div class="contact-card" (click)="toggleTab('linkedin')">
+      <i class="fab fa-linkedin"></i>
+      <h3>LinkedIn</h3>
+      <p>Professional networking and connections.</p>
+    </div>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-content" *ngIf="activeTab">
+    <ng-container [ngSwitch]="activeTab">
+
+      <!-- Email Form -->
+      <div *ngSwitchCase="'email'" class="tab-panel">
+        <h3>Send Me a Message</h3>
+        <form (ngSubmit)="sendMessage()" #contactForm="ngForm">
+          <div class="form-group">
+            <input type="text" name="name" [(ngModel)]="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" [(ngModel)]="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <textarea name="message" [(ngModel)]="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" [disabled]="contactForm.invalid || submitted">
+            {{ submitted ? 'Sent ✓' : 'Send Message' }}
+          </button>
+        </form>
+      </div>
+
+      <!-- GitHub Link -->
+      <div *ngSwitchCase="'github'" class="tab-panel">
+        <h3>GitHub</h3>
+        <p>
+          View my repositories and projects. Collaborate or star something cool!
+        </p>
+        <a class="btn-primary" href="https://github.com/felixmarubi" target="_blank">Open GitHub</a>
+      </div>
+
+      <!-- LinkedIn Link -->
+      <div *ngSwitchCase="'linkedin'" class="tab-panel">
+        <h3>LinkedIn</h3>
+        <p>Connect professionally and explore collaboration opportunities.</p>
+        <a class="btn-primary" href="https://linkedin.com/in/felixmarubi" target="_blank">Open LinkedIn</a>
+      </div>
+
+    </ng-container>
+  </div>
+</section>

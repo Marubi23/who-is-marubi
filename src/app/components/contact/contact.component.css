@@ -1,0 +1,99 @@
+.contact-hero {
+  padding: 100px 10%;
+  background: #0a0f24;
+  color: #e2e8f0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.hero-header h1 {
+  font-size: 3rem;
+  color: #00ff72;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #a0a8b0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.contact-card {
+  background: #0d1329;
+  padding: 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 255, 114, 0.3);
+}
+
+.contact-card i {
+  font-size: 2.5rem;
+  color: #00ff72;
+  margin-bottom: 10px;
+}
+
+.tab-content {
+  margin-top: 40px;
+}
+
+.tab-panel {
+  background: #0d1329;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.tab-panel h3 {
+  color: #00ff72;
+  margin-bottom: 20px;
+}
+
+.tab-panel .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.tab-panel input,
+.tab-panel textarea {
+  background: #0a0f24;
+  border: 2px solid #00ff72;
+  border-radius: 8px;
+  padding: 10px;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+.tab-panel button {
+  background: #00ff72;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #000;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.tab-panel button:disabled {
+  background: #3b3f55;
+  cursor: not-allowed;
+}
+
+.tab-panel button:hover:not(:disabled) {
+  transform: scale(1.05);
+}
