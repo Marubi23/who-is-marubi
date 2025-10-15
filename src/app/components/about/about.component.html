@@ -1,50 +1,67 @@
-<section class="about-terminal" id="about">
+<div class="about-terminal">
+
+  <!-- Terminal Header -->
   <div class="terminal-header">
-    <i class="fas fa-terminal"></i> root&#64;felix:~# 
-    <span class="typed-text">{{ typedText }}</span><span class="cursor"></span>
+    <i class="fas fa-terminal"></i> WHO IS MARUBI...
   </div>
 
-  <div class="about-container">
-    <div class="terminal-column">
-      <h2><i class="fas fa-user-secret"></i> About Felix</h2>
-      <p class="intro">
-        I'm <span class="highlight">Felix Marubi</span> — a cybersecurity researcher, OSINT investigator, and 
-        Kali Linux operator. My world revolves around information security, ethical hacking, and full-stack engineering.
-      </p>
+  <!-- Boot Animation -->
+  <div class="terminal-body">
+    <div *ngFor="let line of lines" class="terminal-line">{{ line }}</div>
+    <div *ngIf="currentLine" class="terminal-line">
+      {{ currentLine }}<span class="cursor"></span>
+    </div>
+  </div>
 
-      <p class="note">
-        Each system hides traces... I specialize in uncovering them.
-      </p>
+  <!-- Case File / About Section -->
+  <div *ngIf="isLoaded" @fadeIn class="about-section fade-in">
+
+    <!-- Profile Section -->
+    <div class="profile-card">
+      <img src="assets/felix.jpg" alt="Marubyte Profile" class="profile-image" />
+      <div class="profile-details">
+        <p><strong>Code Name:</strong> &#64;marubyte</p>
+        <p><strong>Occupation:</strong> Cybersecurity Researcher & Full-Stack Developer</p>
+        <p><strong>Specialty:</strong> OSINT, Ethical Hacking, AI Systems</p>
+        <p><strong>Mission:</strong> Secure digital ecosystems while innovating creative tech solutions.</p>
+      </div>
     </div>
 
-    <div class="cards-grid">
+    <!-- Cards Section -->
+    <div class="cards">
       <div class="card">
-        <i class="fas fa-search"></i>
-        <h3>OSINT & Forensics</h3>
-        <p>Digital footprint tracing, metadata correlation, and threat mapping — powered by data intelligence.</p>
-      </div>
-
-      <div class="card">
-        <i class="fas fa-bug"></i>
-        <h3>Penetration Testing</h3>
-        <p>Kali-driven exploits, vulnerability scanning, and privilege escalation workflows across live systems.</p>
+        <i class="fas fa-shield-alt"></i>
+        <h3>Cybersecurity</h3>
+        <p>Precision in securing systems, monitoring threats, and ethical penetration testing.</p>
       </div>
 
       <div class="card">
         <i class="fas fa-code"></i>
         <h3>Full-Stack Development</h3>
-        <p>Secure systems with <strong>Angular</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong> — defense meets design.</p>
+        <p>Building seamless, high-performance applications with robust architecture.</p>
       </div>
 
       <div class="card">
-        <i class="fas fa-network-wired"></i>
-        <h3>Network Intelligence</h3>
-        <p>Active reconnaissance, traffic analysis, and adaptive defense modeling for enterprise-level networks.</p>
+        <i class="fas fa-brain"></i>
+        <h3>Creative Logic</h3>
+        <p>Combining analytical thinking and creativity for unique tech solutions.</p>
+      </div>
+    </div>
+
+    <!-- Interactive Terminal Bot -->
+    <div #chatSection class="interactive-terminal">
+      <h3><i class="fas fa-comment-dots"></i> Talk to Marubyte</h3>
+
+      <div *ngFor="let res of responses" class="terminal-line">
+        <span class="prompt">{{ prompt }}</span> {{ res.input }}
+        <div class="terminal-output">{{ res.output }}</div>
+      </div>
+
+      <div class="input-line">
+        <span class="prompt">{{ prompt }}</span>
+        <input type="text" [(ngModel)]="command" (keyup.enter)="executeCommand()"
+               placeholder="Type a command and press Enter..." autocomplete="off" />
       </div>
     </div>
   </div>
-
-  <div class="footer-terminal">
-    <p><i class="fas fa-chevron-right"></i> uptime: 5+ years • status: active reconnaissance • mode: stealth</p>
-  </div>
-</section>
+</div>

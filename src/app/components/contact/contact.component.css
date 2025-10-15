@@ -1,99 +1,82 @@
 .contact-hero {
-  padding: 100px 10%;
-  background: #0a0f24;
-  color: #e2e8f0;
+  padding: 50px 20px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0a0f1a, #111a2b);
+  color: #dfe6f1;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0,123,255,0.1);
 }
 
-.hero-header h1 {
-  font-size: 3rem;
-  color: #00ff72;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  color: #a0a8b0;
-}
+.hero-header h1 { font-size: 2.5rem; color: #00aaff; margin-bottom: 10px; }
+.hero-subtitle { font-size: 1.1rem; color: #cfd9ea; margin-bottom: 35px; }
 
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 25px;
+  justify-content: center;
+  margin-bottom: 35px;
 }
 
 .contact-card {
-  background: #0d1329;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,170,255,0.3);
+  border-radius: 15px;
   padding: 25px;
-  border-radius: 12px;
+  width: 220px;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(0, 255, 114, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0,170,255,0.4);
+  border-color: #00aaff;
 }
 
 .contact-card i {
-  font-size: 2.5rem;
-  color: #00ff72;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
+  color: #00aaff;
+  margin-bottom: 12px;
 }
 
-.tab-content {
-  margin-top: 40px;
-}
+.tab-content { margin-top: 25px; }
 
-.tab-panel {
-  background: #0d1329;
-  padding: 30px;
+.tab-panel { 
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,170,255,0.2);
+  padding: 20px;
   border-radius: 12px;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
-.tab-panel h3 {
-  color: #00ff72;
-  margin-bottom: 20px;
-}
-
-.tab-panel .form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.tab-panel input,
-.tab-panel textarea {
-  background: #0a0f24;
-  border: 2px solid #00ff72;
-  border-radius: 8px;
+.tab-panel input, .tab-panel textarea {
+  width: 100%;
   padding: 10px;
-  color: #e2e8f0;
-  font-size: 1rem;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #00aaff;
+  background: rgba(0,0,0,0.2);
+  color: #dfe6f1;
+  font-family: inherit;
 }
 
-.tab-panel button {
-  background: #00ff72;
+.tab-panel textarea { min-height: 100px; resize: none; }
+
+.btn-primary {
+  background: #00aaff;
   border: none;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-weight: 500;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
   cursor: pointer;
-  color: #000;
-  margin-top: 10px;
-  transition: all 0.3s;
+  font-weight: 600;
+  transition: background 0.3s;
 }
 
-.tab-panel button:disabled {
-  background: #3b3f55;
-  cursor: not-allowed;
-}
+.btn-primary:hover { background: #0088cc; }
 
-.tab-panel button:hover:not(:disabled) {
-  transform: scale(1.05);
-}

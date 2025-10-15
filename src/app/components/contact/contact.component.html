@@ -1,9 +1,9 @@
 <section class="contact-hero" id="contact">
   <!-- Hero header -->
   <div class="hero-header">
-    <h1>Let’s Connect</h1>
+    <h1>Connect</h1>
     <p class="hero-subtitle">
-      Collaboration, cyber challenges, or just a friendly hello — reach out and we’ll make it happen.
+      Collaboration, cyber challenges, or just a friendly hello — choose your preferred method below.
     </p>
   </div>
 
@@ -12,19 +12,25 @@
     <div class="contact-card" (click)="toggleTab('email')">
       <i class="fas fa-envelope-open-text"></i>
       <h3>Email</h3>
-      <p>Send me a message directly to <strong>felixmarubi&#64;protonmail.com</strong></p>
+      <p>Send me a message directly at <strong>felixmarubi&#64;protonmail.com</strong></p>
     </div>
 
     <div class="contact-card" (click)="toggleTab('github')">
       <i class="fab fa-github"></i>
       <h3>GitHub</h3>
-      <p>Check my projects and collaborate on code.</p>
+      <p>Check my projects, collaborate, or star cool repos.</p>
     </div>
 
     <div class="contact-card" (click)="toggleTab('linkedin')">
       <i class="fab fa-linkedin"></i>
       <h3>LinkedIn</h3>
-      <p>Professional networking and connections.</p>
+      <p>Professional networking and collaboration opportunities.</p>
+    </div>
+
+    <div class="contact-card" (click)="toggleTab('whatsapp')">
+      <i class="fab fa-whatsapp"></i>
+      <h3>WhatsApp</h3>
+      <p>Quick messages or inquiries via WhatsApp chat.</p>
     </div>
   </div>
 
@@ -34,37 +40,36 @@
 
       <!-- Email Form -->
       <div *ngSwitchCase="'email'" class="tab-panel">
-        <h3>Send Me a Message</h3>
+        <h3>Email Me</h3>
         <form (ngSubmit)="sendMessage()" #contactForm="ngForm">
-          <div class="form-group">
-            <input type="text" name="name" [(ngModel)]="name" placeholder="Your Name" required />
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" [(ngModel)]="email" placeholder="Your Email" required />
-          </div>
-          <div class="form-group">
-            <textarea name="message" [(ngModel)]="message" placeholder="Your Message" required></textarea>
-          </div>
+          <input type="text" name="name" [(ngModel)]="name" placeholder="Your Name" required />
+          <input type="email" name="email" [(ngModel)]="email" placeholder="Your Email" required />
+          <textarea name="message" [(ngModel)]="message" placeholder="Your Message" required></textarea>
           <button type="submit" class="btn-primary" [disabled]="contactForm.invalid || submitted">
             {{ submitted ? 'Sent ✓' : 'Send Message' }}
           </button>
         </form>
       </div>
 
-      <!-- GitHub Link -->
+      <!-- GitHub -->
       <div *ngSwitchCase="'github'" class="tab-panel">
         <h3>GitHub</h3>
-        <p>
-          View my repositories and projects. Collaborate or star something cool!
-        </p>
-        <a class="btn-primary" href="https://github.com/felixmarubi" target="_blank">Open GitHub</a>
+        <p>View my repositories, fork, or collaborate.</p>
+        <a class="btn-primary" href="https://github.com/Marubi23" target="_blank">Visit</a>
       </div>
 
-      <!-- LinkedIn Link -->
+      <!-- LinkedIn -->
       <div *ngSwitchCase="'linkedin'" class="tab-panel">
         <h3>LinkedIn</h3>
-        <p>Connect professionally and explore collaboration opportunities.</p>
-        <a class="btn-primary" href="https://linkedin.com/in/felixmarubi" target="_blank">Open LinkedIn</a>
+        <p>Connect professionally and explore collaborations.</p>
+        <a class="btn-primary" href="https://www.linkedin.com/in/felix-marubi-763bb7356/" target="_blank">Visit LinkedIn</a>
+      </div>
+
+      <!-- WhatsApp -->
+      <div *ngSwitchCase="'whatsapp'" class="tab-panel">
+        <h3>WhatsApp</h3>
+        <p>Quick chat or inquiries via WhatsApp.</p>
+        <button class="btn-primary" (click)="openWhatsApp()">Open WhatsApp</button>
       </div>
 
     </ng-container>
