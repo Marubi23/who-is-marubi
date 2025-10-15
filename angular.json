@@ -19,7 +19,11 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              { "glob": "**/*", "input": "public", "output": "/" }
+              {
+                "glob": "**/*",
+                "input": "public",
+                "output": "/"
+              }
             ],
             "styles": ["src/styles.css"],
             "scripts": []
@@ -34,7 +38,11 @@
               "vendorChunk": false,
               "buildOptimizer": true,
               "budgets": [
-                { "type": "initial", "maximumWarning": "500kb", "maximumError": "1mb" }
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
               ]
             },
             "development": {
@@ -45,19 +53,22 @@
             }
           }
         },
-         "serve": {
-  "builder": "@angular-devkit/build-angular:dev-server",
-  "options": {
-    "buildTarget": "portfolio:build:development"
-  },
-  "configurations": {
-    "production": { "buildTarget": "portfolio:build:production" },
-    "development": { "buildTarget": "portfolio:build:development" }
-  }
-}
-
-
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "portfolio:build:development"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "portfolio:build:production"
+            },
+            "development": {
+              "buildTarget": "portfolio:build:development"
+            }
+          }
+        }
       }
     }
-  }
+  },
+  "defaultProject": "portfolio"
 }
