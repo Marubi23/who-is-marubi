@@ -8,9 +8,9 @@
 
 ---
 
-## 🚀 Live Demo
+🚀 Live Demo
 **Demo:** <https://who-is-marubi.netlify.app>  
-**Preview:** Add one-line screenshots or animated GIFs in `/assets` and embed them here.
+Click the url above to view my portifolio
 
 ---
 
@@ -48,8 +48,5 @@
 - Node.js v18+ (or version used in the project)
 - npm or yarn
 
-**Clone**
-```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+property of marubi
 
