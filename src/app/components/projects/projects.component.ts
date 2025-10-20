@@ -20,7 +20,7 @@ export class ProjectsComponent {
   projects: Project[] = [
     { name: 'VarsityHub', description: 'An E-commerce site that provides a platform for young sellers to showcase their products on a local area.', tools: ['Angular','Node.js','MongoDB'], year: 2025, link: 'https://kyuvarsityhub.netlify.app' },
     { name: 'Minds That Matter', description: 'Accessible learning platform powered by AI-driven engagement.', tools: ['React','Express','MongoDB'], year: 2025, link: 'https://mindsthatmatter.netlify.app' },
-    { name: 'File share server', description: 'A server for uploading your files with secure systems against OWASP top 10 vulnrabilities.', tools: ['Kali Linux','Python','Bash'], year: 2025, link: '#' }
+    { name: 'ByteLab', description: 'ByteLabs is a hands-on cybersecurity learning platform that provides practical labs, guided mentorship, and global community support for aspiring ethical hackers and IT security enthusiasts', tools: ['Angular','Bootstrap','Nelify(rendering)'], year: 2025, link: 'https://marubilabs.netlify.app/' }
   ];
 
   modalOpen = false;
