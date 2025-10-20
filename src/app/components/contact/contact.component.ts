@@ -40,6 +40,6 @@ export class ContactComponent {
   }
 
   openWhatsApp() {
-    window.open('https://wa.me/254712345678', '_blank');
+    window.open('https://wa.me/25412683708', '_blank');
   }
 }
