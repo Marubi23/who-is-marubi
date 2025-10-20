@@ -1,59 +1,52 @@
-# Portfolio
+# <Your Name> — Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+[![Website Status](https://img.shields.io/badge/status-production-brightgreen)]()
+[![Last Commit](https://img.shields.io/github/last-commit/Marubi23/who-is-marubi)]()
+[![License](https://img.shields.io/badge/license-MIT-blue)]()
 
-## Development server
+> Professional portfolio showcasing projects, case studies, and contact information. Built with a modern frontend stack and focused on accessibility, performance, and convertibility.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+🚀 Live Demo
+**Demo:** <https://who-is-marubi.netlify.app>  
+Click the url above to view my portifolio
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## ✨ Highlights
+- Clean, responsive, and accessible UI optimized for hiring managers and recruiters.
+- Project pages with live demos, source links, tech stacks, and short case studies.
+- Fast load (performance-focused), SEO-friendly meta, and mobile-first design.
+- Easy to deploy: supports Vercel / Netlify / GitHub Pages / self-hosting.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 🧩 Features
+- Homepage with hero, skills, featured projects, and call-to-action.
+- Projects section: live demo, repo link, tech tags, and short case study per project.
+- Blog / Notes (optional): markdown powered posts or MDX.
+- Contact form with spam protection (reCAPTCHA / Netlify forms / Formspree).
+- Dark mode + accessible color contrast.
+- Analytics-ready (Netlify / Vercel / Plausible / Google Analytics).
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🛠 Tech stack (customize)
+- **Framework:** React + Vite | Angular | Vanilla HTML/CSS/JS  
+- **Styling:** Tailwind CSS | SCSS | CSS Modules  
+- **Hosting:** Vercel / Netlify / GitHub Pages  
+- **Extras:** open-vm-tools (for dev) — replace with your dev tools as needed
 
-## Building
+> Replace the above options with the ones you used. Example: `React (Vite) + Tailwind + Vercel`.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## ⚙️ Local development
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+**Prerequisites**
+- Node.js v18+ (or version used in the project)
+- npm or yarn
 
-## Running unit tests
+property of marubi
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
